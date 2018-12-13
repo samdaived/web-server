@@ -39,7 +39,7 @@ app.get('/about',(req,res)=>{
 
 app.get('/project',(req,res)=>{
     res.render('homePage.hbs',{
-        title:"About Page",
+        title:"Project Page",
         welcome:"Weclome from our project page"
     })
 });
