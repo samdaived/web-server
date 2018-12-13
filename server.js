@@ -37,6 +37,14 @@ app.get('/about',(req,res)=>{
     })
 });
 
+app.get('/project',(req,res)=>{
+    res.render('about',{
+        title:"About Page",
+        welcome:"Weclome from our project page"
+    })
+});
+
+
 
 app.use((req,res,next)=>{
    
