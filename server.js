@@ -31,14 +31,14 @@ app.get('/',(req,res)=>{
 
 
 app.get('/about',(req,res)=>{
-    res.render('about',{
+    res.render('homePage.hbs',{
         title:"About Page",
         welcome:"Weclome from our about page"
     })
 });
 
 app.get('/project',(req,res)=>{
-    res.render('about',{
+    res.render('homePage.hbs',{
         title:"About Page",
         welcome:"Weclome from our project page"
     })
@@ -46,19 +46,7 @@ app.get('/project',(req,res)=>{
 
 
 
-app.use((req,res,next)=>{
-   
-    var log =`${req.method} ${new Date().toString()} ${req.url}, `
-        fs.appendFile('server.log',log,(er)=>{
-            if(er){console.log(er);
-            }
-        });
-        res.render('maintenance.hbs',{title:"Sorry"})
 
-
-}
-
-);
 
 
 app.listen(port,()=>console.log(`${port}`)
