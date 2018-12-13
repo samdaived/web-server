@@ -3,6 +3,8 @@ const hbs =require('hbs');
 var app= express();
 var fs =require('fs');
 
+
+const port = process.env.PORT||3000;
 hbs.registerPartials(__dirname+'/views/partials');
 app.set('view engine','hbs');
 app.use(express.static(__dirname+'/public'));
@@ -51,6 +53,6 @@ app.use((req,res,next)=>{
 );
 
 
-app.listen(5000,()=>console.log("see 5000")
+app.listen(port,()=>console.log(`${port}`)
 )
 
